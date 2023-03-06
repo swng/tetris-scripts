@@ -24,3 +24,15 @@ Python
 # path_to_cover.js
 Converts path.csv to cover.csv. The path.csv is assumed to be generated with sfinder arguments arguments `-f csv -k pattern`  
 Node.js
+
+# 1kf.js
+For full transparency and for preservation sake, uploading my personal copy of 1kf jstris userscript here into this repo. Original script by Justin1L8. This is the deepdrop version - this means that it will look for the lowest possible row to drop the piece.  
+Usage:  
+Install this userscript with a userscript manager extension such as Tampermonkey/Greasemonkey/Violentmonkey.  
+Set certain variables to configure a few things:  
+username string (my 1kf account is "1kfst")  
+columnar alignment - I found "inward" to be the most intuitive.  
+row-to-rotation mapping - I found default reasonable.  
+require2taps - useful when learning the keys for certain placements. Effectively 2kf when you have this on.  
+.  
+I haven't made any real changes to this script. Just uploading for preservation's sake along with transparency to anyone interested in looking into how I play 1kf.
