@@ -36,3 +36,5 @@ row-to-rotation mapping - I found default reasonable.
 require2taps - useful when learning the keys for certain placements. Effectively 2kf when you have this on.  
 .  
 I haven't made any real changes to this script. Just uploading for preservation's sake along with transparency to anyone interested in looking into how I play 1kf.
+
+Putting tetrio related scripts in tetrio folder. Mainly stuff that involves interacting with tetrio API.
