@@ -21,3 +21,6 @@ an attempt to guess at the blitz method used based on line clears done in the ru
 
 # thing.py
 A lot of these are pretty dumb trivia stuff
+
+# disputed_blitzers.py
+Some scores are marked as disputed on the leaderboard. Who and why? Is the common denominator just tetrio+ or whatever? Curious.
