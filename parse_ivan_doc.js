@@ -95,6 +95,10 @@ for(i = 0; i < bigList.length - 7; i++) {  // last title is followed by like 7 m
 
 }
 
+// let's throw the current time into the object, uh, inside the worthless Contents object
+let a = new Date();
+opener_list[0]["timestamp"] = a.toISOString();
+
 // hopefully opener_list array is populated with opener objects!
 
 // export!!!!
