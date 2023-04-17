@@ -25,12 +25,16 @@ let bigList = document.getElementsByClassName("c27 c30 doc-content")[0].childNod
 // ok the exact class name seems to change around but you should be able to figure it out via inspect element - just the element with all the content in it!!!
 
 let opener_list = [];
+let categories = [];
+let rich_categories = {};
+let last_category_primary = "";
+let last_category_secondary = "";
 
 for(i = 0; i < bigList.length - 7; i++) {  // last title is followed by like 7 more lines
     if (bigList[i].id) {
         let next = bigList[i+1].textContent;
         if (next.includes("SEARCH") || next.includes("Sources")) {
-            console.log(i, bigList[i].textContent);
+            // console.log(i, bigList[i].textContent);
             let nextOpener = {name: bigList[i].textContent};
             let parsed = [];
             let endOpenerParse = false;
@@ -89,11 +93,35 @@ for(i = 0; i < bigList.length - 7; i++) {  // last title is followed by like 7 m
                     }
                 else { endOpenerParse = true; }
             }
+            nextOpener["tag_primary"] = last_category_primary;
+            nextOpener["tag_secondary"] = last_category_secondary;
+            if (opener_list.length == 0) {
+                // this is actually the TOC, not an opener.
+                let href_regex = /href="(?:#)?(.*?)"/g;
+                for (let category of nextOpener["Sources"]) {
+                    let match;
+                    while (match = href_regex.exec(category)) {
+                        categories.push(match[1]);
+                    }
+                }
+            }
             opener_list.push(nextOpener);
         }
-    }
+        else if (categories.includes(bigList[i].id)) {
+            let category = bigList[i].textContent;
+            if (category.startsWith("[1st Bag") || category == "Sources" || category == "Extra" || category.startsWith("THE GARAGE")) {
+                last_category_primary = category;
+            }
+            else {
+                last_category_secondary = category;
+            }
 
+            rich_categories[bigList[i].id] = [last_category_primary, last_category_secondary];
+        }
+    }
 }
+
+opener_list[0]["categories"] = rich_categories;
 
 // let's throw the current time into the object, uh, inside the worthless Contents object
 let a = new Date();
