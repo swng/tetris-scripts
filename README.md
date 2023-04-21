@@ -42,6 +42,9 @@ Written by cringemoment#4599
 Processes the data.json fumens and generates cover data.  
 Uses system() calls to sfinder.jar and glueFumens.js - takes a while to process.
 
+# bruh.py
+idk, the next version of `ivan_doc_cover_processing.py`, that checks congruent setups in the cover, but takes longer to run
+
 # 1kf.js
 For full transparency and for preservation sake, uploading my personal copy of 1kf jstris userscript here into this repo. Original script by Justin1L8. This is the deepdrop version - this means that it will look for the lowest possible row to drop the piece.  
 Usage:  
