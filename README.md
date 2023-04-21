@@ -3,6 +3,9 @@
 # copy.bat
 copies the cover.csv from the sfinder directory into the current directory. Adjust coverPath to your own sfinder directory. It's a batch file, so it's to be run on Windows.
 
+# copy.sh
+copies the cover.csv from the sfinder directory into the current directory. Adjust coverPath to your own sfinder directory. It's a bash shell script, so it's to be run on Unix/Linux/MacOS. `chmod u+x` to give execute perms to the user.
+
 # covered_path.py
 reads a cover.csv file, and prints out the paths that are covered by a particular queue. Adjust the queue string on L14 to the queue you're looking into... Python.
 
