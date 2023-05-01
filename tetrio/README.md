@@ -24,3 +24,6 @@ A lot of these are pretty dumb trivia stuff
 
 # disputed_blitzers.py
 Some scores are marked as disputed on the leaderboard. Who and why? Is the common denominator just tetrio+ or whatever? Curious.
+
+# b2b_level_tetrio.js
+At what b2b chain do certain "levels" start in tetrio attack table? Figure it out with binary search using tetrio damcalc function.
